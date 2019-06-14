@@ -5,6 +5,7 @@
 #include "actions/gauge/gaugebcs/gaugebc_factory.h"
 #include "actions/gauge/gaugebcs/gaugebc_aggregate.h"
 #include "actions/gauge/gaugebcs/simple_gaugebc.h"
+#include "actions/gauge/gaugebcs/trans_gaugebc.h"
 #include "actions/gauge/gaugebcs/periodic_gaugebc.h"
 #include "actions/gauge/gaugebcs/schr_triv_gaugebc.h"
 #include "actions/gauge/gaugebcs/schr_nonpert_gaugebc.h"
@@ -29,6 +30,7 @@ namespace Chroma
       if (! registered)
       {
 	success &= SimpleGaugeBCEnv::registerAll();
+	success &= TransGaugeBCEnv::registerAll();
 	success &= PeriodicGaugeBCEnv::registerAll();
 	success &= SchrTrivialGaugeBCEnv::registerAll();
 	success &= SchrNonPertGaugeBCEnv::registerAll();

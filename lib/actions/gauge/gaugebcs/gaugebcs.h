@@ -19,6 +19,7 @@
 #include "gaugebc_aggregate.h"
 
 #include "simple_gaugebc.h"
+#include "trans_gaugebc.h"
 #include "periodic_gaugebc.h"
 #include "schroedinger_gaugebc.h"
 #include "schr_sf_gaugebc.h"
