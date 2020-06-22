@@ -103,9 +103,10 @@ namespace Chroma {
      * Note the given phases should obey |lambda_i - lambda_j| < 2 pi
      * and sum_i lambda_i = 0.
      */
-    Real rescale = 1.0;
+    Real rescale = 0.0;
     for(int i=0; i<2; ++i)
-      rescale /= 2.0*(Layout::lattSize()[p.trans_dirs[i]]-1);
+      rescale += 2*(Layout::lattSize()[p.trans_dirs[i]]-1);
+    rescale = 1.0/rescale;
     for(int i=0; i<2; ++i)
       {
 	int mu = p.trans_dirs[i];
